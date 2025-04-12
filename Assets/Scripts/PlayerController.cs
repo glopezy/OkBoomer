@@ -11,10 +11,17 @@ public class PlayerController : MonoBehaviour
 
     public float mouseSensitivity;
 
+    [SerializeField]  private Camera cam;
+
+    [SerializeField] private GameObject impactPrefab;
+
+
+    [SerializeField] private int currentAmmo;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();   
+        rb = GetComponent<Rigidbody2D>();  
+       
     }
 
     // Update is called once per frame
@@ -22,6 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Aim();
+        Shoot();
     }
 
     private void Move()
@@ -38,6 +46,33 @@ public class PlayerController : MonoBehaviour
     {
         mouseInput = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y")) * mouseSensitivity;
 
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z - mouseInput.x);  
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z - mouseInput.x);
+
+        cam.transform.localRotation = Quaternion.Euler(cam.transform.localRotation.eulerAngles + new Vector3(0f, mouseInput.y, 0f));
+    }
+
+    private void Shoot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if(currentAmmo>0)
+            {
+                Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    Debug.Log("looking at " + hit.transform.name);
+                    Instantiate(impactPrefab, hit.point, transform.rotation);
+                }
+                else
+                {
+                    Debug.Log("looking at nothing");
+
+                }
+                currentAmmo--;
+
+            }
+            
+        }
     }
 }
