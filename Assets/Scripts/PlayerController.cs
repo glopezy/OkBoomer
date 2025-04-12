@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     private Rigidbody2D rb;
 
     [SerializeField] private float moveSpeed;
@@ -16,7 +18,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject impactPrefab;
 
 
-    [SerializeField] private int currentAmmo;
+    [SerializeField] public int currentAmmo;
+
+    [SerializeField] private Animator gunAnim;
+
+    private void Awake()
+    {
+
+        instance = this;
+
+    }
+
 
     void Start()
     {
@@ -71,6 +83,7 @@ public class PlayerController : MonoBehaviour
                 }
                 currentAmmo--;
 
+                gunAnim.SetTrigger("Shoot");
             }
             
         }

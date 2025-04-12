@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4430266095461029197}
   - component: {fileID: 8919307606122051622}
   - component: {fileID: 574706620515232303}
+  - component: {fileID: 8794019249328698002}
   m_Layer: 0
   m_Name: Impact
   m_TagString: Untagged
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4178046375966092550, guid: 97595eaa9b55c85468fd06791b573d51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -124,3 +125,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0.5
+--- !u!114 &8794019249328698002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6512413329744206434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7a8014e8b38564393d5f7c70b979d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
