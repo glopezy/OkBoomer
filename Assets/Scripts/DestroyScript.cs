@@ -4,7 +4,7 @@ public class DestroyScript : MonoBehaviour
 {
 
     [SerializeField] float time;
-
+    
 
     void Start()
     {

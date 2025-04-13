@@ -22,6 +22,12 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Animator gunAnim;
 
+    [SerializeField] private int hp;
+    [SerializeField] private int maxHp = 100;
+    private bool isDead;
+
+    [SerializeField] private GameObject deathScreen;
+
     private void Awake()
     {
 
@@ -33,15 +39,20 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();  
+        hp = maxHp;
        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
-        Aim();
-        Shoot();
+        if (!isDead)
+        {
+            Move();
+            Aim();
+            Shoot();
+        }
+        
     }
 
     private void Move()
@@ -75,6 +86,11 @@ public class PlayerController : MonoBehaviour
                 {
                     Debug.Log("looking at " + hit.transform.name);
                     Instantiate(impactPrefab, hit.point, transform.rotation);
+
+                    if (hit.transform.tag == "Enemy")
+                    {
+                        hit.transform.parent.GetComponent<EnemyScript>().TakeDamage();
+                    }
                 }
                 else
                 {
@@ -88,4 +104,22 @@ public class PlayerController : MonoBehaviour
             
         }
     }
+
+    public void TakeDamage(int damage)
+    {
+        hp -= damage;
+
+        if (hp <= 0)
+        {
+            deathScreen.SetActive(true);
+            isDead = true;
+        }
+
+        if (hp > maxHp)
+        {
+            hp = maxHp;
+        }
+    }
+
+    
 }
