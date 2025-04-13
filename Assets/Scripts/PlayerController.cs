@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -13,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     public float mouseSensitivity;
 
-    [SerializeField]  private Camera cam;
+    [SerializeField] private Camera cam;
 
     [SerializeField] private GameObject impactPrefab;
 
@@ -22,12 +23,16 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Animator gunAnim;
 
-    [SerializeField] private int hp;
+    [SerializeField] public int hp;
     [SerializeField] private int maxHp = 100;
     private bool isDead;
 
     [SerializeField] private GameObject deathScreen;
 
+    [SerializeField] TextMeshProUGUI hpText;
+    [SerializeField] TextMeshProUGUI ammoText;
+
+    [SerializeField] private Animator animator;
     private void Awake()
     {
 
@@ -40,6 +45,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();  
         hp = maxHp;
+        animator = GetComponent<Animator>();
        
     }
 
@@ -52,7 +58,14 @@ public class PlayerController : MonoBehaviour
             Aim();
             Shoot();
         }
-        
+
+        hpText.text = hp.ToString() + "%";
+        ammoText.text = "Ammo: " + currentAmmo.ToString();
+
+        if (hp > maxHp)
+        {
+            hp = maxHp;
+        }
     }
 
     private void Move()
@@ -63,6 +76,16 @@ public class PlayerController : MonoBehaviour
         Vector3 moveV = transform.right * moveInput.y;
 
         rb.linearVelocity = (moveH + moveV) * moveSpeed;
+
+        if(moveInput != Vector2.zero)
+        {
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
+        }
+        
     }
 
     private void Aim()
@@ -115,10 +138,7 @@ public class PlayerController : MonoBehaviour
             isDead = true;
         }
 
-        if (hp > maxHp)
-        {
-            hp = maxHp;
-        }
+        
     }
 
     
