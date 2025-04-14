@@ -4,7 +4,7 @@ public class AudioScript : MonoBehaviour
 {
     public static AudioScript instance;
 
-    [SerializeField] private AudioSource ammo, enemyDeath, enemyShot, gunshot, health, playerHurt;
+    [SerializeField] private AudioSource ammo, enemyDeath, enemyShot, gunshot, noAmmo, health, playerHurt;
 
     private void Awake()
     {
@@ -42,6 +42,12 @@ public class AudioScript : MonoBehaviour
     {
         gunshot.Stop();
         gunshot.Play();
+    }
+
+    public void PlayNoAmmo()
+    {
+        noAmmo.Stop();
+        noAmmo.Play();
     }
 
     public void PlayHealthPickup()

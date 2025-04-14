@@ -36,11 +36,17 @@ public class EnemyScript : MonoBehaviour
     public void TakeDamage()
     {
         hp--;
-        if(hp <= 0)
+
+        if (hp <= 0)
         {
             AudioScript.instance.PlayEnemyDeath();
             Destroy(gameObject);
             Instantiate(explosionPrefab, transform.position, transform.rotation);
+        }
+
+        else
+        {
+            AudioScript.instance.PlayEnemyShot();
         }
     }
 

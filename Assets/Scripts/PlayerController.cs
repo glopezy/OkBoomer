@@ -126,7 +126,10 @@ public class PlayerController : MonoBehaviour
 
                 AudioScript.instance.PlayGunShot();
             }
-            
+            else
+            {
+                AudioScript.instance.PlayNoAmmo();
+            }
         }
     }
 
