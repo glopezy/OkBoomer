@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 95bc58071ae493c48aa5fb9fecdc6e93
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 217578
+  packageName: Hellish Battle - 2.5D Retro FPS
+  packageVersion: 2.5.2a
+  assetPath: Assets/Classic FPS/Materials/Levels/Stone/Stone_25.mat
+  uploadId: 722489

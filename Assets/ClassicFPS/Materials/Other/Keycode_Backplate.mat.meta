@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a94fe46f843a4ee4f96feb2bc35639db
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 217578
+  packageName: Hellish Battle - 2.5D Retro FPS
+  packageVersion: 2.5.2a
+  assetPath: Assets/Classic FPS/Materials/Other/Keycode_Backplate.mat
+  uploadId: 722489

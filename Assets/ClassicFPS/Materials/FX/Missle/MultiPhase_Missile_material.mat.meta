@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5e307a0faa7b4da4aba85d8a26c49fa0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 217578
+  packageName: Hellish Battle - 2.5D Retro FPS
+  packageVersion: 2.5.2a
+  assetPath: Assets/Classic FPS/Materials/FX/Missle/MultiPhase_Missile_material.mat
+  uploadId: 722489

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 096b218cb02e2824c830b189cbc506fa
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 217578
+  packageName: Hellish Battle - 2.5D Retro FPS
+  packageVersion: 2.5.2a
+  assetPath: Assets/Classic FPS/Materials/FX/Missle/Angel_Missile_material.mat
+  uploadId: 722489

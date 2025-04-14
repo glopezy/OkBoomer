@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 957bfa6c9bc88594abd9790a5b20e8ea
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 217578
+  packageName: Hellish Battle - 2.5D Retro FPS
+  packageVersion: 2.5.2a
+  assetPath: Assets/Classic FPS/Materials/Levels/Brick/Brick_06.mat
+  uploadId: 722489

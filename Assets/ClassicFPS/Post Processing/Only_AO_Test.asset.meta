@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0fa11e9465dde064785481e6fd481ec1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 217578
+  packageName: Hellish Battle - 2.5D Retro FPS
+  packageVersion: 2.5.2a
+  assetPath: Assets/Classic FPS/Post Processing/Only_AO_Test.asset
+  uploadId: 722489
