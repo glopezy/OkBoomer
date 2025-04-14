@@ -23,6 +23,8 @@ public class HealthPickupScript : MonoBehaviour
 
             Destroy(gameObject);
 
+            AudioScript.instance.PlayHealthPickup();
+
 
         }
     }

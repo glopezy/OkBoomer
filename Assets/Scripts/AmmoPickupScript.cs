@@ -22,6 +22,7 @@ public class AmmoPickupScript : MonoBehaviour
 
             Destroy(gameObject);
 
+            AudioScript.instance.PlayAmmoPickup();
 
         }
     }

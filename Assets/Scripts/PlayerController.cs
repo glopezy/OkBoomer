@@ -123,6 +123,8 @@ public class PlayerController : MonoBehaviour
                 currentAmmo--;
 
                 gunAnim.SetTrigger("Shoot");
+
+                AudioScript.instance.PlayGunShot();
             }
             
         }
@@ -131,6 +133,8 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         hp -= damage;
+
+        AudioScript.instance.PlayPlayerHurt();
 
         if (hp <= 0)
         {

@@ -38,6 +38,7 @@ public class EnemyScript : MonoBehaviour
         hp--;
         if(hp <= 0)
         {
+            AudioScript.instance.PlayEnemyDeath();
             Destroy(gameObject);
             Instantiate(explosionPrefab, transform.position, transform.rotation);
         }
