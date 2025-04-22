@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    Debug.Log("looking at " + hit.transform.name);
+                    //Debug.Log("looking at " + hit.transform.name);
                     Instantiate(impactPrefab, hit.point, transform.rotation);
 
                     if (hit.transform.tag == "Enemy")
