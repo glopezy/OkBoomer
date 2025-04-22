@@ -12,11 +12,15 @@ public class RestartScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ResetScene();
+        }
     }
 
     public void ResetScene()
     {
+        Debug.Log("Restarting Scene");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

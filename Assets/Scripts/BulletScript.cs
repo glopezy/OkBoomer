@@ -13,7 +13,7 @@ public class BulletScript : MonoBehaviour
     void Start()
     {
 
-        Debug.Log("Shot");
+        //Debug.Log("Shot");
         rb = GetComponent<Rigidbody2D>();
 
         direction = PlayerController.instance.transform.position - transform.position;

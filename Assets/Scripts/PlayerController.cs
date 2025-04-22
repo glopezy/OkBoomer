@@ -46,7 +46,10 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();  
         hp = maxHp;
         animator = GetComponent<Animator>();
-       
+        deathScreen.SetActive(false);
+        isDead = false;
+        Time.timeScale = 1;
+
     }
 
     // Update is called once per frame
@@ -143,6 +146,7 @@ public class PlayerController : MonoBehaviour
         {
             deathScreen.SetActive(true);
             isDead = true;
+            Time.timeScale = 0;
         }
 
         
