@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4960259780715119737}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 3
   moveSpeed: 1
-  playerRange: 6
+  playerRange: 12
   explosionPrefab: {fileID: 1139271473119154173, guid: 516c287cd578cb4499eaec1fb305526c, type: 3}
   bulletPrefab: {fileID: 1053426352804055373, guid: 776a2fb6db20ffd4f882877cdbc76ff5, type: 3}
   canShoot: 1
