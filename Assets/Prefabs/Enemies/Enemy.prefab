@@ -84,12 +84,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
-  moveSpeed: 1
+  moveSpeed: 0.5
   playerRange: 12
   explosionPrefab: {fileID: 1139271473119154173, guid: 516c287cd578cb4499eaec1fb305526c, type: 3}
   bulletPrefab: {fileID: 1053426352804055373, guid: 776a2fb6db20ffd4f882877cdbc76ff5, type: 3}
   canShoot: 1
-  fireRate: 0.5
+  fireRate: 1
   lastFired: 0
   firePosition: {fileID: 7769933264513058023}
 --- !u!50 &4960259780715119737
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 7022579593945261231}
   - component: {fileID: 7275751068387492343}
   - component: {fileID: 1832207980841313837}
-  - component: {fileID: 6755347204366981700}
+  - component: {fileID: 1644637495821603299}
   m_Layer: 0
   m_Name: skull-1
   m_TagString: Enemy
@@ -276,7 +276,7 @@ CapsuleCollider:
   m_Height: 2.672854
   m_Direction: 1
   m_Center: {x: -0.000000336028, y: 1.361427, z: 0}
---- !u!95 &6755347204366981700
+--- !u!95 &1644637495821603299
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -286,7 +286,7 @@ Animator:
   m_GameObject: {fileID: 7933323138486993182}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38baf7ccee8a57b45bd4f4148406c781, type: 2}
+  m_Controller: {fileID: 9100000, guid: abb91773ea428874f8e1a740fa6c758c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
